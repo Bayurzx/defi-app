@@ -7,10 +7,10 @@ import './Tether.sol';
 contract DecentralBank {
     string public name = "Decentral Bank";
     address public owner;
-    Reward public reward;
     Tether public tether;
+    Reward public reward;
 
-    constructor(Reward _reward, Tether _tether){
+    constructor(Reward _reward, Tether _tether) {
         reward = _reward;
         tether = _tether;
     }
