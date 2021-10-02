@@ -52,5 +52,19 @@ contract('Tethero', accounts => {
 
     })
     
+    describe('Yield Farming', async () => {
+        it('reward tokens for staking', async () => {
+            // check investor balance
+            const check = await tether.balanceOf(accounts[1]);
+            assert.equal(check.toString(), web3.utils.toWei("100"), "customer mock wallet balance")
+
+            // // check staking for customer
+            // await tether.approve(decentralBank.address, web3.utils.toWei("100"), {from: accounts[1]})
+            // await decentralBank.depositTokens(web3.utils.toWei("100"), {from: accounts[1]})
+        })
+
+
+    })
+    
 });
 
